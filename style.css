@@ -3,35 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
+body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: #0c0c0c;
     color: #ffffff;
     line-height: 1.6;
 }
-
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
 
-ul {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* --- HEADER STYLES --- */
+/* --- HEADER STYLES STARTED --- */
 .header {
     display: flex;
     justify-content: space-between;
@@ -43,45 +28,47 @@ img {
     width: 100%;
     z-index: 1000;
 }
-.logo {
-     font-size: 22px; 
-     font-weight: bold;
-      color: #d1d5db; 
-    }
-.nav {
-     display: flex;
-      gap: 30px; 
-    }
-.icon {
-     position: relative; 
-     cursor: pointer; 
-     font-size: 18px; 
-     color: #d1d5db;
-     }
-.tooltip {
-    position: absolute;
-    bottom: -30px; 
-    left: 50%;
-    transform: translateX(-50%); 
-    background-color: #2c2c2c; 
-    padding: 5px 8px;
-    border-radius: 4px;
-    font-size: 12px; 
-    white-space: nowrap; 
-    display: none; 
-    }
-.icon:hover .tooltip { 
-    display: block;
- }
-.user {
-     position: relative;
-     }
-.user-menu { 
-    display: none;
+.logo { 
+    font-size: 22px; 
+    font-weight: bold; 
+    color: #d1d5db; 
+}
+.nav { 
+    display: flex; 
+    gap: 30px; 
+}
+.icon { 
+    position: relative; 
+    cursor: pointer; 
+    font-size: 18px; 
+    color: #d1d5db; 
+}
+.symbol { 
     position: absolute; 
-    top: 30px; right: -10px; 
+    bottom: -30px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: #2c2c2c;
+    padding: 5px 8px; 
+    border-radius: 4px; 
+    font-size: 12px; 
+    white-space: nowrap;
+    display: none; 
+}
+.icon:hover .tooltip { 
+    display: block; 
+}
+.user-dropdown { 
+    position: relative; 
+}
+.user-menu { 
+    display: none; 
+    position: absolute; 
+    top: 30px; 
+    right: -10px; 
     background-color: #2c2c2c; 
-    border-radius: 8px; padding: 15px; 
+    border-radius: 8px; 
+    padding: 15px; 
     width: 240px; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); 
     z-index: 1001; 
@@ -90,32 +77,36 @@ img {
     font-size: 14px; 
     font-weight: bold; 
     color: #ffffff; 
-    margin: 0 0 4px 0;
- }
-.instruction {
-    font-size: 12px;
-    color: #ccc;
-    line-height: 1.4;
-    margin: 0 0 12px 0; 
+    margin: 0 0 4px 0; 
 }
-.user-login {
-     font-size: 12px; 
-     color: #ccc; 
-     margin: 0;
-     }
-.user-menu button {
+.instruction { 
+    font-size: 12px;
+    color: #ccc; 
+    line-height: 1.4; 
+    margin: 0 0 12px 0; 
+    }
+.user-login-prompt { 
+    font-size: 12px; 
+    color: #ccc; 
+    margin: 0;
+ }
+.user-menu button { 
     background-color: transparent; 
-    border: 1px solid #ccc; color: #fff; 
-    padding: 6px 12px; font-size: 13px; 
-    border-radius: 4px; cursor: pointer;
+    border: 1px solid #ccc; 
+    color: #fff; 
+    padding: 6px 12px; 
+    font-size: 13px; 
+    border-radius: 4px; 
+    cursor: pointer; 
     width: 100%; 
     margin-bottom: 8px; 
 }
-.user:hover .user-menu {
-     display: block; 
-    }
+.user-dropdown:hover .user-menu { 
+    display: block; 
+}
+/* --- HEADER STYLES ENDED --- */
 
-/* --- HERO SECTION STYLES --- */
+/* --- HERO STYLES STARTED --- */
 .hero {
     position: relative;
     width: 100%;
@@ -124,68 +115,66 @@ img {
     overflow: hidden;
     background: #000;
 }
-.hero-slides { 
+.slides { 
     display: flex; 
-    width: 400%; /* Changed for 4 slides (3 original + 1 clone) */
+    width: 400%;
     height: 100%; 
-    /* This animation makes it slide automatically */
     animation: infinite-forward 12s infinite;
 }
-.slide { 
-    width: 25%; /* Each slide is 1/4 of the container */
+.each-slide { 
+    width: 25%; 
     height: 100%; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
     transition: transform 0.5s ease-in-out;
 }
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-.slide-info {
+
+.info { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    align-items: center; gap: 2rem; 
-    width: 90%; max-width: 1200px; 
+    align-items: center; 
+    gap: 2rem; 
+    width: 90%; 
+    max-width: 1200px; 
     text-align: left; 
 }
-.slide-text p { 
+.text p { 
     font-size: 1rem; 
     color: #a0a0a0; 
 }
-.slide-text h1 { 
+.text h1 { 
     font-size: 3rem; 
-    line-height: 1.2; margin: 
-    10px 0 20px; 
+    line-height: 1.2; 
+    margin: 10px 0 20px; 
     color: #fff; 
 }
-.slide-text .price {
+.text .price {
      margin-bottom: 30px; 
     }
-.slide-text .current-price { 
+.text .current-price { 
     font-size: 1.5rem; 
     font-weight: 600; 
     color: #fff; 
     margin-right: 15px; 
 }
-.slide-text .old-price { 
+.text .old-price { 
     font-size: 1.5rem; 
     color: #777; 
-    text-decoration: line-through; 
-}
+    text-decoration: line-through;
+ }
 .slide-image { 
     display: flex; 
     justify-content: center; 
     align-items: center; 
 }
-.slide-image img { 
-    max-width: 80%; 
-    max-height: 400px; 
-    object-fit: contain; 
-}
+.slide-image img {
+     max-width: 80%; 
+     max-height: 400px; 
+     object-fit: contain; 
+    }
 
-/* --- GENERAL BUTTON STYLES --- */
+    
 .btn {
     display: inline-block;
     padding: 10px 25px;
@@ -211,7 +200,7 @@ img {
     opacity: 0.9;
 }
 
-/* Keyframes for the infinite forward sliding */
+
 @keyframes infinite-forward {
     0%, 22% { transform: translateX(0%); }
     25%, 47% { transform: translateX(-25%); }
@@ -220,46 +209,38 @@ img {
     100% { transform: translateX(-75%); }
 }
 
-.slider-nav {
+.slider-nav { 
     position: absolute; 
     bottom: 20px; 
     left: 50%; 
-    transform: translateX(-50%); display: flex; gap: 10px; }
+    transform: translateX(-50%); 
+    display: flex; 
+    gap: 10px; 
+}
 .nav-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%; 
-    background-color: #555; 
-}
+     width: 10px;
+      height: 10px; 
+      border-radius: 50%; 
+      background-color: #555; 
+ }
 
-/* Animate each dot individually over the same total duration */
-.slider-nav .nav-dot:nth-child(1) {
-    animation: active-dot-1 12s infinite;
-}
-.slider-nav .nav-dot:nth-child(2) {
-    animation: active-dot-2 12s infinite;
-}
-.slider-nav .nav-dot:nth-child(3) {
-    animation: active-dot-3 12s infinite;
-}
+.slider-nav .nav-dot:nth-child(1) { animation: active-dot-1 12s infinite; }
+.slider-nav .nav-dot:nth-child(2) { animation: active-dot-2 12s infinite; }
+.slider-nav .nav-dot:nth-child(3) { animation: active-dot-3 12s infinite; }
 
-/* Keyframes to control the first dot's color */
 @keyframes active-dot-1 { 
     0%, 25% { background-color: #e50914; } 
     28%, 100% { background-color: #555; } 
 }
-/* Keyframes to control the second dot's color */
+
 @keyframes active-dot-2 { 
     0%, 25% { background-color: #555; } 
     28%, 50% { background-color: #e50914; } 
     53%, 100% { background-color: #555; } 
 }
-/* Keyframes to control the third dot's color */
+
 @keyframes active-dot-3 { 
     0%, 50% { background-color: #555; } 
     53%, 75% { background-color: #e50914; } 
     78%, 100% { background-color: #555; } 
 }
-
-
-/* Featured Products Section */ 
