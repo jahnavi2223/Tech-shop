@@ -244,3 +244,110 @@ body{
     53%, 75% { background-color: #e50914; } 
     78%, 100% { background-color: #555; } 
 }
+
+
+/* --- HERO STYLES STARTED --- */
+
+
+/* FEATURE PRODUCTS STARTED  */
+
+
+.featured-products {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #0f0f0f;
+}
+
+.featured-products h2 {
+  font-size: 28px;
+  color: #cfd1e1;
+  margin-bottom: 40px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 90px;
+}
+
+/* Base product styling */
+.product {
+  text-align: center;
+  color: #cfd1e1;
+  transition: transform 0.3s ease;
+}
+
+.product p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.price .current {
+  font-weight: 600;
+  color: #e6e6f0;
+}
+
+.price .highlight {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.price .original {
+  text-decoration: line-through;
+  color: #7c7c7c;
+  font-size: 14px;
+  position: relative;
+  top: 3px;
+}
+
+.price .original1 {
+  text-decoration: line-through;
+  color: #7c7c7c;
+  font-size: 14px;
+  position: relative;
+  top: 8px;
+}
+
+
+.product.small img {
+  height: 150px;
+}
+
+.product.medium img {
+  height: 200px;
+}
+
+.product.center img {
+  height: 300px;
+}
+
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.dots {
+  margin-top: 30px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #555;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.active {
+  background-color: red;
+}
+/* FEATURE PRODUCTS ENDED  */
